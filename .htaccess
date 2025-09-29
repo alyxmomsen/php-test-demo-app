@@ -1,0 +1,11 @@
+# .htaccess
+
+# Включить модуль перезаписи URL
+RewriteEngine On
+
+# Если запрошенный URI не является существующим файлом...
+RewriteCond %{REQUEST_FILENAME} !-f
+# И не является существующей папкой...
+RewriteCond %{REQUEST_FILENAME} !-d
+# Перенаправить запрос на index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
