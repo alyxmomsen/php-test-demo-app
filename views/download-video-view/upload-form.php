@@ -1,4 +1,4 @@
-<form action="/admin/media/upload" method="post" enctype="multipart/form-data">
+<form action="/controllers/upload.javascript.php" method="post" enctype="multipart/form-data">
 
     <input type="hidden" name="MAX_FILE_SIZE" value="52428800" />
 
@@ -7,6 +7,8 @@
 
     <label for="title">Название:</label>
     <input type="text" name="title" id="title">
-
-    <button type="submit">Загрузить</button>
+    <input type="submit" value="go">
 </form>
+<div>
+    <input placeholder="type" type="text" name="title-to-upload" id="title-to-upload">
+</div>

@@ -1,9 +1,5 @@
 <?php
-echo '<pre>';
-var_dump($_FILES['media_file']);
 
-// move_uploaded_file($_FILES['userfile'] , '')
-echo '</pre>';
 
 ?>
 <div>

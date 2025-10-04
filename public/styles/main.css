@@ -1,5 +1,6 @@
 :root {
     --foo: #666 ;
+    --margin-mobile-1:2px;
 }
 
 * {
@@ -12,15 +13,59 @@ body {
     background-color: rgb(34, 47, 70);
 }
 
-.wrapper--simple {
-
-
-    border: 1px solid black;
-
+.main-wrapper {
+    width:auto ;
+    margin:2px;
+    background-color: aliceblue;
 }
 
-.page--home {
-    margin: 19px;
-    padding: 19px;
-    background-color: var(--foo);
+fieldset {
+    width: auto;
 }
+
+.main-wrapper fieldset input {
+    display: block;
+    width:80% ;
+    margin: 0 auto 2px;
+}
+
+/* like tile-wind */
+
+@media screen and (min-width:400px) and (max-width:600px) {
+    body {
+        background-color: #4e3962;
+    }
+
+    .main-wrapper {
+        width: auto;
+        margin: 2px 9px;
+    }
+
+    .main-wrapper fieldset input {
+        display: block;
+        min-width: 300px;
+        max-width: 300px;
+        margin: 0 auto 2px;
+    }
+}
+
+@media screen and (min-width:600px)/*  and (max-width:900px) */ {
+    body {
+        background-color: black;
+    }
+
+    .main-wrapper {
+        width: auto;
+        margin: 9px 66px;
+    }
+
+    .main-wrapper fieldset input {
+        display: inline-block;
+        width: 100px;
+        margin: 0 20px 2px;
+    }
+}
+
+/* @media screen {
+    
+} */

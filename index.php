@@ -13,40 +13,13 @@
 </head>
 
 <body>
-    <?php
-    // $config = $configmanager->getConfig();
+    <div class="main-wrapper">
+        <?php
 
-    $explodeduri = explode('/', $_SERVER['REQUEST_URI']);
-
-    var_dump($explodeduri);
-
-    if (
-        isset($explodeduri[1])
-        && ($explodeduri[1] === ''
-            || $explodeduri[1] === 'main'
-            || $explodeduri[1] === 'home')
-    ) {
-
-        echo 'case 1';
-        require './views/pages/home.page.php';
-    } else {
-
-        if (
-            isset($explodeduri[1])
-            && ($explodeduri[1] === 'admin'
-                || $explodeduri[1] === 'admin'
-                || $explodeduri[1] === 'admin')
-        ) {
-
-            require './views/pages/admin.page.php';
-        } else {
-
-            echo 'case 2';
-            require './views/pages/other.page.php';
-        }
-    }
-
-    ?>
+        require "./views/parts/upload.javascript.php";
+        // require "./views/download-video-view/upload-form.php";
+        ?>
+    </div>
     <div>
         <a href="/bar">go bar</a>
         <a href="/foo">go home</a>
